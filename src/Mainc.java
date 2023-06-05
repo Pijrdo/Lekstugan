@@ -5,12 +5,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Mainc {
-
+public int numberOfRows;
     public static void main(String[] args) throws FileNotFoundException {
 
-    File file = new File("/Users/christoffer/IdeaProjects/Lekstugan/src/input.txt");
+    File file = new File(args[0]);
     Scanner scan = new Scanner(file);
-
+    this.numberOfRows = scan.nextInt();
+    System.out.println(numberOfRows);
     while(scan.hasNextLine()){
         String str = scan.nextLine();
         System.out.println(str);
